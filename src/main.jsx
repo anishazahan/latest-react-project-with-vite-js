@@ -7,6 +7,10 @@ import Home from './pages/Home/Home.jsx'
 import About from './pages/About/About.jsx'
 import Service from './pages/Service/Service.jsx'
 import Books from './pages/Books/Books.jsx'
+import Contact from './pages/Contact/Contact.jsx'
+import Book1 from './pages/Contact/Books-1.jsx'
+import Books2 from './pages/Contact/Books-2.jsx'
+
 
 const router = createBrowserRouter([
   {
@@ -27,7 +31,22 @@ const router = createBrowserRouter([
       },
       {
         path:'/books',
-        element: <Books></Books>
+        element: <Books></Books>,
+        loader:()=>fetch("https://api.itbook.store/1.0/new")
+      },
+      {
+        path:'/contact',
+        element: <Contact></Contact>,
+        children:[
+          {
+            path:'1',
+            element: <Book1></Book1>,
+          },
+          {
+            path:'2',
+            element: <Books2></Books2>
+          },
+        ]
       },
     ]
   },

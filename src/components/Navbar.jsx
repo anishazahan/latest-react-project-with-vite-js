@@ -2,6 +2,10 @@ import React, { useState } from 'react'
 import MobileMenu from './MobileMenu'
 import { Link, NavLink } from 'react-router-dom'
 
+
+
+
+
 const Navbar = () => {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -97,12 +101,10 @@ const Navbar = () => {
 		</nav>
 	</div>
   }
-   
 
 
 
 </div>
-
 
 
 
