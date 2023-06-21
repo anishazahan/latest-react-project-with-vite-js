@@ -1,5 +1,6 @@
 import React from 'react'
 import MobileMenu from './MobileMenu'
+import { Link, NavLink } from 'react-router-dom'
 
 const Navbar = () => {
 
@@ -17,15 +18,15 @@ const Navbar = () => {
 		
 		<ul className="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6">
 
-			<li><a className="text-sm text-gray-400 hover:text-gray-500" href="#">Home</a></li>
+			<li><Link to='/' className="text-sm text-gray-400 hover:text-gray-500" href="#">Home</Link></li>
 			
-			<li><a className="text-sm text-gray-400 hover:text-gray-500" href="#">About Us</a></li>
+			<li><NavLink to='/about'  className={({ isActive }) => (isActive ? 'text-blue-500 font-bold' : 'text-sm text-gray-400 hover:text-gray-500') } >About Us</NavLink></li>
 			
-			<li><a className="text-sm text-gray-400 hover:text-gray-500" href="#">Service</a></li>
+			<li><Link to='/services' className="text-sm text-gray-400 hover:text-gray-500" href="#">Service</Link></li>
 			
-			<li><a className="text-sm text-gray-400 hover:text-gray-500" href="#">Pricing</a></li>
+			<li><Link to='/books' className="text-sm text-gray-400 hover:text-gray-500" href="#">Books</Link></li>
 		
-			<li><a className="text-sm text-gray-400 hover:text-gray-500" href="#">Contact</a></li>
+			<li><Link to='/' className="text-sm text-gray-400 hover:text-gray-500" href="#">Contact</Link></li>
 		</ul>
 
 
