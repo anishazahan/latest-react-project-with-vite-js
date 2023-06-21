@@ -11,12 +11,14 @@ import Contact from './pages/Contact/Contact.jsx'
 import Book1 from './pages/Contact/Books-1.jsx'
 import Books2 from './pages/Contact/Books-2.jsx'
 import BookDetails from './pages/Books/BookDetails.jsx'
+import ErrorPage from './components/ErrorPage.jsx'
 
 
 const router = createBrowserRouter([
   {
     path:'/',
     element:<App/>,
+    errorElement: <ErrorPage />,
     children:[
       {
         path:'/',

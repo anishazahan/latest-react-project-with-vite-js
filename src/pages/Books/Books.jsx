@@ -4,13 +4,15 @@ import SingleBooks from './SingleBooks'
 import LoadingSpinner from './LoadingSpinner'
 
 const Books = () => {
-
+    
+    const { books } = useLoaderData()
+    
     const navigation = useNavigation()
     console.log(navigation.state)
     if (navigation.state === 'loading') {
       return <LoadingSpinner />
     }
-    const { books } = useLoaderData()
+    
     // console.log(books)
  
   return (
