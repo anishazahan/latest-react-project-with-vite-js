@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 const SingleBooks = ({book}) => {
   console.log(book);
   return (
+    // eslint-disable-next-line react/prop-types
     <Link to={`../book/${book.isbn13}`}>
     <div className='overflow-hidden relative transition duration-200 transform hover:-translate-y-2 rounded shadow-lg hover:shadow-2xl'>
       <img
